@@ -68,7 +68,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="&#xD;&#xA;" DisplayName="REF_AuditoriaSOx_Challenge" sap:VirtualizedContainerService.HintSize="441,893" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="&#xA;" DisplayName="REF_AuditoriaSOx_Challenge" sap:VirtualizedContainerService.HintSize="441,893" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="varConfig" />
     </Sequence.Variables>
@@ -80,7 +80,9 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="- Carrega o arquivo de configuração;&#xA;" DisplayName="Invoke AuditoriaSOx_Load_Settings workflow" sap:VirtualizedContainerService.HintSize="379,155" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="AuditoriaSOx\AuditoriaSOx_Load_Settings.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[varConfig]</OutArgument>
+        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">
+          <mva:VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="varConfig" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -114,14 +116,30 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="- Extrai dados do sistema de demandas e submete na aplicação;&#xA;" DisplayName="Invoke AuditoriaSOx_SaveFiles workflow" sap:VirtualizedContainerService.HintSize="379,155" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AuditoriaSOx\AuditoriaSOx_SaveFiles.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_DemandaUrl">[varConfig("DemandaUrl").ToString]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_NumeroDemanda">[varConfig("NumeroDemanda").ToString]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_TelaSolicitante">[New FileInfo(varConfig("TelaSolicitante").ToString).FullName]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_TelaDesenvolvimento">[New FileInfo(varConfig("TelaDesenvolvimento").ToString).FullName]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_TelaTestes">[New FileInfo(varConfig("TelaTestes").ToString).FullName]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_TelaHomologacao">[New FileInfo(varConfig("TelaHomologacao").ToString).FullName]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_TelaProducao">[New FileInfo(varConfig("TelaProducao").ToString).FullName]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_FinalPath">[New FileInfo(varConfig("FinalPath").ToString).FullName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DemandaUrl">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="varConfig(&quot;DemandaUrl&quot;).ToString" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_NumeroDemanda">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="varConfig(&quot;NumeroDemanda&quot;).ToString" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_TelaSolicitante">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="New FileInfo(varConfig(&quot;TelaSolicitante&quot;).ToString).FullName" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_TelaDesenvolvimento">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="New FileInfo(varConfig(&quot;TelaDesenvolvimento&quot;).ToString).FullName" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_TelaTestes">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="New FileInfo(varConfig(&quot;TelaTestes&quot;).ToString).FullName" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_TelaHomologacao">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="New FileInfo(varConfig(&quot;TelaHomologacao&quot;).ToString).FullName" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_TelaProducao">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="New FileInfo(varConfig(&quot;TelaProducao&quot;).ToString).FullName" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FinalPath">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="New FileInfo(varConfig(&quot;FinalPath&quot;).ToString).FullName" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -131,7 +149,9 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="- Efetua logout do sistema de demandas e encerra a aplicação;&#xA;" DisplayName="Invoke AuditoriaSOx_Close workflow" sap:VirtualizedContainerService.HintSize="379,155" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="AuditoriaSOx\AuditoriaSOx_Close.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_DemandasURL">[varConfig("AuditoriaSOxUrl").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DemandasURL">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="varConfig(&quot;AuditoriaSOxUrl&quot;).ToString" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
