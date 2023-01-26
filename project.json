@@ -1,6 +1,6 @@
 {
   "name": "REF_AuditoriaSOx_Challenge",
-  "description": "- Acessar o sistema de controle de demandas e pesquisar por uma determinada demanda/projeto;\r\n- Os dados extraídos deverão ser gravados na aplicação Auditor 4.0. (padrão Microsoft Word);\r\n- Todas as evidências capturadas devem ser guardadas em uma pasta para posterior verificação;\r\n- As imagens capturadas deverão conter a data/hora em que a evidencia foi capturada;\r\n- O robô deverá informar ao usuário que o relatório foi gerado;",
+  "description": "- Acessar o sistema web e pesquisar por uma determinada demanda/projeto;\r\n- Os dados extraídos deverão ser gravados na aplicação Auditor 4.0. (padrão Microsoft Word);\r\n- Todas as evidências capturadas devem ser guardadas em uma pasta para posterior verificação;\r\n- As imagens capturadas deverão conter a data/hora em que a evidencia foi capturada;\r\n- O robô deverá informar ao usuário que o relatório foi gerado;",
   "main": "Main.xaml",
   "dependencies": {
     "RPAToolkit": "[1.1.8]",
