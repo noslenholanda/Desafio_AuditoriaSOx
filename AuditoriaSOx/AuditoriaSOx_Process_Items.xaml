@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Activity mc:Ignorable="sap sap2010" x:Class="AuditoriaSOx_Process_Items" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_NomeSolicitante" Type="InArgument(x:String)" />
+    <x:Property Name="in_NumeroDemanda" Type="InArgument(x:String)" />
+    <x:Property Name="in_GerenciaSolicitante" Type="InArgument(x:String)" />
+    <x:Property Name="in_DataCriacaoDemanda" Type="InArgument(x:String)" />
+    <x:Property Name="in_NomeDesenvolvedor" Type="InArgument(x:String)" />
+    <x:Property Name="in_GerenciaDesenvolvedor" Type="InArgument(x:String)" />
+    <x:Property Name="in_DataInicioDes" Type="InArgument(x:String)" />
+    <x:Property Name="in_DataTerminoDes" Type="InArgument(x:String)" />
+    <x:Property Name="in_DataLibTeste" Type="InArgument(x:String)" />
+    <x:Property Name="in_NomeTestador" Type="InArgument(x:String)" />
+    <x:Property Name="in_GerenciaTestador" Type="InArgument(x:String)" />
+    <x:Property Name="in_DataInicioTeste" Type="InArgument(x:String)" />
+    <x:Property Name="in_DataTerminoTeste" Type="InArgument(x:String)" />
+    <x:Property Name="in_DataLibHomologacao" Type="InArgument(x:String)" />
+    <x:Property Name="in_NomeHomologador" Type="InArgument(x:String)" />
+    <x:Property Name="in_GerenciaHomologador" Type="InArgument(x:String)" />
+    <x:Property Name="in_DataHomologacao" Type="InArgument(x:String)" />
+    <x:Property Name="in_NomeAceitador" Type="InArgument(x:String)" />
+    <x:Property Name="in_DataAceitacaoHom" Type="InArgument(x:String)" />
+    <x:Property Name="in_VersaoPromovida" Type="InArgument(x:String)" />
+    <x:Property Name="in_NomeProfissionalPromoveu" Type="InArgument(x:String)" />
+    <x:Property Name="in_GerenciaProfissionalPromoveu" Type="InArgument(x:String)" />
+    <x:Property Name="in_DataPromoveuVersao" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:AuditoriaSOx_Process_Items.in_NomeSolicitante>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_NomeSolicitante>
+  <this:AuditoriaSOx_Process_Items.in_NumeroDemanda>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_NumeroDemanda>
+  <this:AuditoriaSOx_Process_Items.in_GerenciaSolicitante>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_GerenciaSolicitante>
+  <this:AuditoriaSOx_Process_Items.in_DataCriacaoDemanda>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_DataCriacaoDemanda>
+  <this:AuditoriaSOx_Process_Items.in_NomeDesenvolvedor>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_NomeDesenvolvedor>
+  <this:AuditoriaSOx_Process_Items.in_GerenciaDesenvolvedor>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_GerenciaDesenvolvedor>
+  <this:AuditoriaSOx_Process_Items.in_DataInicioDes>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_DataInicioDes>
+  <this:AuditoriaSOx_Process_Items.in_DataTerminoDes>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_DataTerminoDes>
+  <this:AuditoriaSOx_Process_Items.in_DataLibTeste>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_DataLibTeste>
+  <this:AuditoriaSOx_Process_Items.in_NomeTestador>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_NomeTestador>
+  <this:AuditoriaSOx_Process_Items.in_GerenciaTestador>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_GerenciaTestador>
+  <this:AuditoriaSOx_Process_Items.in_DataInicioTeste>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_DataInicioTeste>
+  <this:AuditoriaSOx_Process_Items.in_DataTerminoTeste>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_DataTerminoTeste>
+  <this:AuditoriaSOx_Process_Items.in_DataLibHomologacao>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_DataLibHomologacao>
+  <this:AuditoriaSOx_Process_Items.in_NomeHomologador>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_NomeHomologador>
+  <this:AuditoriaSOx_Process_Items.in_GerenciaHomologador>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_GerenciaHomologador>
+  <this:AuditoriaSOx_Process_Items.in_DataHomologacao>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_DataHomologacao>
+  <this:AuditoriaSOx_Process_Items.in_NomeAceitador>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_NomeAceitador>
+  <this:AuditoriaSOx_Process_Items.in_DataAceitacaoHom>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_DataAceitacaoHom>
+  <this:AuditoriaSOx_Process_Items.in_VersaoPromovida>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_VersaoPromovida>
+  <this:AuditoriaSOx_Process_Items.in_NomeProfissionalPromoveu>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_NomeProfissionalPromoveu>
+  <this:AuditoriaSOx_Process_Items.in_GerenciaProfissionalPromoveu>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_GerenciaProfissionalPromoveu>
+  <this:AuditoriaSOx_Process_Items.in_DataPromoveuVersao>
+    <InArgument x:TypeArguments="x:String" />
+  </this:AuditoriaSOx_Process_Items.in_DataPromoveuVersao>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>600,957</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>AuditoriaSOx_Process_Items_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="AuditoriaSOx_Process_Items" sap:VirtualizedContainerService.HintSize="441,892" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AuditorApp\Auditor_Insert_Solicitante.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="AuditorApp\Auditor_Insert_Solicitante.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_NomeSolicitante">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NomeSolicitante" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_NumeroDemanda">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NumeroDemanda" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_GerenciaSolicitante">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_GerenciaSolicitante" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DataCriacaoDemanda">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_DataCriacaoDemanda" />
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AuditorApp\Auditor_Insert_Desenvolvedor.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AuditorApp\Auditor_Insert_Desenvolvimento.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_NumeroDemanda">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NumeroDemanda" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_NomeDesenvolvedor">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NomeDesenvolvedor" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_GerenciaDesenvolvedor">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_GerenciaDesenvolvedor" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DataInicioDes">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_DataInicioDes" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DataTerminoDes">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_DataTerminoDes" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DataLibTeste">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_DataLibTeste" />
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AuditorApp\Auditor_Insert_Testes.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="AuditorApp\Auditor_Insert_Testes.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_NomeTestador">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NomeTestador" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_GerenciaTestador">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_GerenciaTestador" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DataInicioTeste">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_DataInicioTeste" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DataTerminoTeste">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_DataTerminoTeste" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DataLibHomologacao">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_DataLibHomologacao" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_NumeroDemanda">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NumeroDemanda" />
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AuditorApp\Auditor_Insert_HomologaçãoAceite.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="AuditorApp\Auditor_Insert_HomologaçãoAceite.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_NomeHomologador">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NomeHomologador" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_NumeroDemanda">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NumeroDemanda" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_GerenciaHomologador">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_GerenciaHomologador" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DataHomologacao">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_DataHomologacao" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_NomeAceitador">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NomeAceitador" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DataAceitacaoHom">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_DataAceitacaoHom" />
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AuditorApp\Auditor_Insert_Produção.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="AuditorApp\Auditor_Insert_Produção.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_VersaoPromovida">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_VersaoPromovida" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_NomeProfissionalPromoveu">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NomeProfissionalPromoveu" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_GerenciaProfissionalPromoveu">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_GerenciaProfissionalPromoveu" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DataPromoveuVersao">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_DataPromoveuVersao" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_NumeroDemanda">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NumeroDemanda" />
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>
